@@ -89,7 +89,7 @@ class hookControllerRegistry {
 	 */
 	public function getController($hookName) {
 
-		if (!isset($this->controller[$hookName]))
+		if (!isset($this->controllers[$hookName]))
 			return null;
 		else
 			return $this->controllers[$hookName];

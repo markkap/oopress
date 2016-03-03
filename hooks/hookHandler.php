@@ -6,7 +6,7 @@
  * @subpackage HookHandling
  */
 
-namespnamespace oopress\hooks;
+namespace oopress\hooks;
 
 /**
  * Defined the interface every hook handler has to implements
