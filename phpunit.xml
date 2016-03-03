@@ -1,0 +1,7 @@
+<phpunit bootstrap="oopress.php">
+  <testsuites>
+    <testsuite name="oopress">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
