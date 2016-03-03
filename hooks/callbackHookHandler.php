@@ -72,4 +72,6 @@ class callbackHookHandler implements hookHandler {
 		if ($name == $this->hookName)
 		return call_user_func_array($this->callback,$arguments);
 	}
+
+	public function registerDependencies(hookController $hookController) {}
 }
