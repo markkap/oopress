@@ -88,7 +88,7 @@ class priorityHelper {
 	 *
 	 * @since 0.0.1
 	 */
-	public function handle($args=null {
+	public function handle($args=null) {
 
         return $this->controller->handlePriority($this->priority,func_get_args());
 	}
@@ -479,7 +479,7 @@ abstract class hookController {
 		}
 
 		// take into account the handlers registered via add_action/add_filter
-		foreach ($this->() as $priority => $hook) {
+		foreach ($this->getCoreHokkCallbacks() as $priority => $hook) {
 			$callback = $hook['function'];
 			if (is_array($callback)) {
 				if (get_class($callback[0]) == $className) {
