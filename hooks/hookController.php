@@ -316,7 +316,7 @@ abstract class hookController {
 	 *
 	 * @since 0.0.1
 	 */
-	final public function hookHandler() {
+	public function hookHandler() {
 
 		$this->buildDependencyMap();
 		$this->handled = array();
