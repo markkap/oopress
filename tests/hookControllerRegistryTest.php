@@ -3,6 +3,13 @@ namespace oopress\hooks;
 
 include 'actionsim.php';
 
+class dummyAction extends actionController {
+    public $triggered = false;
+
+    public function hookHandler() {
+        $this->triggered = true;
+    }
+}
 /*
  * Tests for the hookControllerRegistry class
  */
@@ -32,5 +39,18 @@ class hookControllerRegistryTest extends \PHPUnit_Framework_TestCase {
         new_action_sim();
         $r = new hookControllerRegistry();
         $r->registerController('dummy');
+    }
+
+    /*
+     * Test "all" hook is properly registered
+     */
+    public function testAllHook() {
+        $s = new_action_sim();
+        $r = new hookControllerRegistry();
+        $t = new dummyAction('dummy');
+        $r->registerController($t);
+
+        do_action('dummy');
+        $this->assertTrue($t->triggered);
     }
 }

@@ -5,6 +5,7 @@ global $actionsim;
 function new_action_sim() {
     global $actionsim;
     $actionsim = new actionsim();
+    return $actionsim;
 }
 
 function do_action($tag, $arg = '') {
