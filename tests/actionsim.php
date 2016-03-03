@@ -29,7 +29,7 @@ function add_filter($tag, $function_to_add, $priority = 10, $accepted_args = 1) 
 
 function current_filter() {
 	global $actionsim;
-	return end( $$actionsim->wp_current_filter );
+	return end( $actionsim->wp_current_filter );
 }
 
 class actionsim {
